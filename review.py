@@ -12,3 +12,10 @@ with open('reviews.txt','r')as f:
 avg  = float( i / len(data))
 print('檔案讀取完畢，總共有',len(data),"筆資料")
 print("留言平均長度為:",avg)
+
+new = []
+for d in data:
+    if len(d)<100:
+        new.append(d)
+print("一共有",len(new),"筆資料長度小於100")
+print(new[0])
